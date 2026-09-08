@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>🔔 Klingel</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <div class="logo">🔔</div>
+
+        <h1>Klingel</h1>
+        <p class="subtitle">Verbinde dich mit deiner Klingel</p>
+
+        <!-- PIN-Bereich -->
+        <div id="pinBereich">
+
+            <label for="pin">PIN eingeben</label>
+
+            <input
+                type="number"
+                id="pin"
+                placeholder="z. B. 4827"
+                inputmode="numeric"
+            >
+
+            <button onclick="verbinden()">
+                🔐 Verbinden
+            </button>
+
+            <p id="meldung"></p>
+
+        </div>
+
+
+        <!-- Klingel-Bereich -->
+        <div id="klingelBereich" class="versteckt">
+
+            <div class="status">
+                🟢 Verbunden
+            </div>
+
+            <button class="klingelButton" onclick="klingeln()">
+                🔔
+                <span>Klingeln</span>
+            </button>
+
+            <button class="trennenButton" onclick="trennen()">
+                Verbindung trennen
+            </button>
+
+            <p id="klingelMeldung"></p>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
